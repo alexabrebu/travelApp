@@ -10,18 +10,289 @@
   <style>
     html,
     body {
+
       margin: 0;
-      padding: 0;
+      padding: 0px;
       font-family: sans-serif;
       background-color: #ededed;
+      background-image: url('/src/images/alex-knight-unsplash.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    body {
+      padding: 50px;
+    }
+
+
+    header .page-header {
+
+      border-style: dashed;
+      color: red;
+      /*position: relative;*/
+      /*margin-bottom: 100px;*/
+      width: max-content;
+    }
+
+    .logo {
+
+      color: aliceblue;
+      font-size: 40px;
+      margin-left: 200px;
+      float: left;
+
+    }
+
+    .nav-bar {
+      float: right;
+      text-align: center;
+      margin-right: 150px;
+
+
+    }
+
+    .nav-bar a {
+      color: aliceblue;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 25px;
+    }
+
+    .nav-bar a:hover {
+      background-color: rgba(77, 150, 111, 0.6);
+      color: #c767af;
+      border-radius: 15px;
+
+    }
+
+    .nav-bar button {
+
+      border-radius: 15px;
+      margin-left: 40px;
+      padding: 15px;
+      color: #424687;
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    .nav-bar button:hover {
+      background-color: rgba(224, 224, 222);
+
+    }
+
+    .hero-section * {
+
+
+      margin: auto;
+      width: max-content;
+      padding-top: 300px;
+      display: block;
+    }
+
+    .hero-section p {
+      font-size: 100px;
+      color: aliceblue;
+      text-align: center;
+    }
+
+    .btns {
+
+      font-size: 20px;
+      border-radius: 15px;
+      padding: 15px;
+      color: aliceblue;
+      background-color: #c767af;
+      font-weight: bold;
+      margin-top: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 50px;
+      padding-left: 50px;
+
+    }
+
+    .btns:hover {
+      background-color: rgba(199, 103, 175, 0.8);
+
+    }
+
+
+
+    .form-section {
+
+      margin: auto;
+      width: max-content;
+      margin-top: 80px;
+
+    }
+
+    .grid-container {
+
+
+      padding: 50px;
+
+      font-size: 40px;
+      background-color: aliceblue;
+      border-radius: 25px;
+      display: inline-flex;
+
+    }
+
+    .grid-item {
+      padding: 20px;
+    }
+
+    .form-cell {
+      border-radius: 15px;
+      padding: 10px;
+      width: fit-content;
+      font-size: 30px;
+      margin-top: 10px;
+      background-color: rgba(199, 103, 175, 0.2);
+    }
+
+    .footer-section {
+      border-style: dashed;
+      color: yellow;
+    }
+
+
+
+    .content-description {
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.6);
+      margin-top: 50px;
+      padding: 30px;
+      display: inline-flex;
+      align-items: center;
+
+    }
+
+    .main-text-right {
+
+      word-wrap: break-word;
+      font-size: 30px;
+      padding: 50px;
+      color: #221e57;
+
+    }
+
+    .main-text-right p:first-of-type {
+      font-size: 100px;
     }
   </style>
   <title>travel-app</title>
 </head>
 
+
+
 <body>
-  <p>Helloo from Alexa</p>
-  <travel-app></travel-app>
+
+  <!--<p>Helloo from Alexa</p>-->
+  <header class="page-header">
+
+    <div class="logo">
+      <p>Travela</p>
+    </div>
+
+    <nav class="nav-bar">
+
+      <a href="">Home</a>
+      <a href="">Tour</a>
+      <a href="">Hotel</a>
+      <a href="">Places</a>
+      <a href="">Contact Us</a>
+      <button class="btn-booknow">Book now</button>
+
+    </nav>
+
+  </header>
+
+  <section>
+    <div class="hero-section">
+      <p>Discover The World<br> With Us</p>
+      <button class="btns">Start Tour</button>
+    </div>
+  </section>
+
+  <section>
+
+    <form class="form-section">
+      <div class="grid-container">
+
+        <div class="grid-item">
+          <label for="destination">Destination</label> <br>
+          <input list="locations" class="form-cell">
+          <datalist id="locations">
+            <option value="Tokyo, Japan">
+            <option value="Kyoto, Japan">
+            <option value="Nagasaki, Japan">
+          </datalist>
+        </div>
+
+        <div class="grid-item">
+          <label for="member">Member</label> <br>
+          <input type="number" min="1" max="10" step="1" class="form-cell">
+        </div>
+
+        <div class="grid-item">
+          <label for="check-in">Check in Date</label> <br>
+          <input type="date" class="form-cell">
+        </div>
+
+        <div class="grid-item">
+          <label for="check-out">Check out Date</label> <br>
+          <input type="date" class="form-cell">
+        </div>
+
+        <div class="grid-item">
+          <input type="submit" value="Book Now" class="btns">
+        </div>
+      </div>
+    </form>
+
+  </section>
+
+  <main>
+    <div class="content-description">
+      <div class="main-image-left">
+        <img src="src/images/koi-fish2-01.png" width="1500">
+      </div>
+      <div class="main-text-right">
+        <p>Amazing Places to <br> enjoy your Travel</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum, felis eget aliquam interdum, nulla
+          quam
+          lacinia nunc, ac dapibus neque sem id mi. Sed iaculis magna odio, id aliquam ipsum porta vitae. Ut sit amet
+          purus et sem
+          rhoncus euismod sed at ligula. Vestibulum non erat erat. Phasellus luctus sed lectus vel blandit. Aenean vel
+          tincidunt
+          tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+          condimentum mauris
+          id risus pellentesque, a accumsan est facilisis. Aliquam erat volutpat. In in augue posuere, interdum mauris
+          id,
+          ultricies leo. Cras pellentesque nulla erat, in viverra metus suscipit ac. Quisque nec risus pulvinar, lacinia
+          ligula
+          quis, egestas tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+          himenaeos. Class
+          aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        </p>
+
+        <button class="btns">Explore More</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <p>I m the footer, hi</p>
+      <p>I m still under construction</p>
+
+    </div>
+
+  </footer>
+
+  <!--<travel-app></travel-app>-->
 
   <script type="module" src="./src/travel-app.js"></script>
 </body>

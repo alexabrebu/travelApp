@@ -28,4 +28,18 @@ export default merge(baseConfig, {
   // alternatively, you can use your JS as entrypoint for rollup and
   // optionally set a HTML template manually
   // input: './app.js',
+
+  /* plugins: [
+
+    copy({
+
+      targets: [
+
+        { src: '/src/images', dest: '/src/images' },
+
+      ]
+
+    })
+
+  ], */
 });

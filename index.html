@@ -12,7 +12,7 @@
     body {
 
       margin: 0;
-      padding: 0px;
+      padding: 0;
       font-family: sans-serif;
       background-color: #ededed;
       background-image: url('https://i.imgur.com/6WmyTfI.jpg');
@@ -26,47 +26,53 @@
     }
 
 
-    header .page-header {
+    /*header {
 
-      border-style: dashed;
-      color: red;
-      /*position: relative;*/
-      /*margin-bottom: 100px;*/
+      /*border-style: dashed;
+      color: red;*/
+    /*position: relative;*/
+    /*margin-bottom: 100px;
       width: max-content;
-    }
+    }*/
 
-    .logo {
+    /*former item-logo; changed elements of the nav-bar container to class "item" for consistency*/
+    .container-nav-bar li:first-of-type {
 
       color: aliceblue;
       font-size: 40px;
       margin-left: 200px;
-      float: left;
-
+      flex-grow: 2;
     }
 
-    .nav-bar {
-      float: right;
-      text-align: center;
-      margin-right: 150px;
-
-
+    .container-nav-bar {
+      display: flex;
+      align-items: center;
     }
 
-    .nav-bar a {
+    /*former item-button; changed elements to class "item" for consistency*/
+    .container-nav-bar li:last-of-type {
+      margin-right: 100px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container-nav-bar a {
       color: aliceblue;
       text-decoration: none;
       padding: 15px 30px;
       font-size: 25px;
     }
 
-    .nav-bar a:hover {
+    .container-nav-bar a:hover {
       background-color: rgba(77, 150, 111, 0.6);
       color: #c767af;
       border-radius: 15px;
 
     }
 
-    .nav-bar button {
+    .container-nav-bar button {
 
       border-radius: 15px;
       margin-left: 40px;
@@ -76,7 +82,7 @@
       font-size: 25px;
     }
 
-    .nav-bar button:hover {
+    .container-nav-bar button:hover {
       background-color: rgba(224, 224, 222);
 
     }
@@ -189,25 +195,29 @@
 
 <body>
 
-  <!--<p>Helloo from Alexa</p>-->
-  <header class="page-header">
+  <!-- HEADER SECTION - fixed with FLEX -->
 
-    <div class="logo">
-      <p>Travela</p>
-    </div>
-
-    <nav class="nav-bar">
-
-      <a href="">Home</a>
-      <a href="">Tour</a>
-      <a href="">Hotel</a>
-      <a href="">Places</a>
-      <a href="">Contact Us</a>
-      <button class="btn-booknow">Book now</button>
-
+  <header>
+    <nav>
+      <ul class="container-nav-bar">
+        <li class="item">
+          <p>Travela</p>
+        </li>
+        <li class="item"><a href="">Home</a></li>
+        <li class="item"><a href="">Tour</a></li>
+        <li class="item"><a href="">Hotel</a></li>
+        <li class="item"><a href="">Places</a></li>
+        <li class="item"><a href="">Contact Us</a></li>
+        <li class="item"><button class="btn-booknow">Book now</button></li>
+      </ul>
     </nav>
-
   </header>
+
+  <!-- SIDE SECTION - TBA -->
+
+  <aside></aside>
+
+  <!-- CONTENT SECTION - STILL BROKEN, ONGOING CHANGES-->
 
   <section>
     <div class="hero-section">
@@ -283,11 +293,13 @@
     </div>
   </main>
 
+
+  <!-- FOOTER SECTION -->
   <footer>
     <div class="footer-section">
       <p>I m the footer, hi</p>
       <p>I m still under construction</p>
-
+      <h1>Yes, I'm still broken :))</h1>
     </div>
 
   </footer>

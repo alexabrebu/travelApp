@@ -11,7 +11,51 @@ You can take a look at the API definitions for locations below.
 Also, don't forget to check out my app on Netlify! 😁
 </p>
 
-# [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)🌸
+
+# API definitions for locations
+
+### GET
+`curl -X GET 'https://devschool-2020.firebaseio.com/alexandra/places.json'`
+
+### POST
+
+<pre><code>curl -X POST -d {
+  {
+   "name": "Osaka Castle",
+   "type": "culture",
+   "description": "Lorem ipsum",
+   "imageUrl": ""
+  } 'https://devschool-2020.firebaseio.com/alexandra/places.json'
+}</code></pre>
+
+### PUT
+
+<pre><code>curl -X PUT -d {
+  {
+   "name": "Mount Fuji",
+   "type": "nature",
+   "description": "Lorem ipsum",
+   "imageUrl": ""
+  } 'https://devschool-2020.firebaseio.com/alexandra/places/placeID.json'
+}</code></pre>
+
+
+### PATCH
+
+<pre><code>curl -X PATCH -d {
+ {
+   "name": "Osaka Castle",
+   "type": "culture",
+   "description": "Lorem ipsum",
+   "imageUrl": ""
+  } 'https://devschool-2020.firebaseio.com/alexandra/places/placeID.json'
+}</code></pre>
+
+### DELETE
+`curl -X DELETE 'https://devschool-2020.firebaseio.com/alexandra/places/placeID.json'`
+
+
+## Travel App
 
 ## Super features that I implemented for this application:
 

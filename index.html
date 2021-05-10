@@ -169,7 +169,7 @@
       }
 
       .form-item {
-        padding: 10px 36px;
+        padding: 10px 35px;
         display: inline-block;
         vertical-align: middle;
         text-align: left;
@@ -466,7 +466,7 @@
           <form>
             <div class="form-item">
               <label for="destination">Destination</label> <br />
-              <input list="locations" class="form-cell" />
+              <input list="locations" class="form-cell" required />
               <datalist id="locations">
                 <option value="Tokyo, Japan"></option>
                 <option value="Kyoto, Japan"></option>
@@ -485,17 +485,18 @@
                 max="10"
                 step="1"
                 class="form-cell"
+                required
               />
             </div>
 
             <div class="form-item">
               <label for="check-in">Check in Date</label> <br />
-              <input type="date" class="form-cell" />
+              <input type="date" class="form-cell" required/>
             </div>
 
             <div class="form-item">
               <label for="check-out">Check out Date</label> <br />
-              <input type="date" class="form-cell" />
+              <input type="date" class="form-cell" required/>
             </div>
 
             <div class="form-item">
@@ -597,7 +598,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit debitis perspiciatis quae veniam, nisi, ut blanditiis distinctio quas tempora dicta totam porro corrupti. Dolore hic deleniti doloribus a ipsa!
         </p></div>
       <form class="form-subscribe">
-        <input type="email"/>
+        <input type="email" required/>
         <button>Subscribe</button>
       </form>
 

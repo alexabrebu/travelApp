@@ -9,6 +9,49 @@
 # [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)❤
 # [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)❤
 
+# API definitions for locations (created using Insomnia)
+
+### GET
+`curl -X GET 'https://devschool-2020.firebaseio.com/alexandra/places.json'`
+
+### POST
+
+<pre><code>curl -X POST -d {
+  {
+   "name": "Osaka Castle",
+   "type": "culture",
+   "description": "Lorem ipsum",
+   "imageUrl": ""
+  } 'https://devschool-2020.firebaseio.com/alexandra/places.json'
+}</code></pre>
+
+### PUT
+
+<pre><code>curl -X PUT -d {
+  {
+   "name": "Mount Fuji",
+   "type": "nature",
+   "description": "Lorem ipsum",
+   "imageUrl": ""
+  } 'https://devschool-2020.firebaseio.com/alexandra/places/placeID.json'
+}</code></pre>
+
+
+### PATCH
+
+<pre><code>curl -X PATCH -d {
+ {
+   "name": "Osaka Castle",
+   "type": "culture",
+   "description": "Lorem ipsum",
+   "imageUrl": ""
+  } 'https://devschool-2020.firebaseio.com/alexandra/places/placeID.json'
+}</code></pre>
+
+### DELETE
+`curl -X DELETE 'https://devschool-2020.firebaseio.com/alexandra/places/placeID.json'`
+
+
 ## Travel App
 
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)

@@ -621,3 +621,9 @@
     <script type="module" src="./src/travel-app.js"></script>
   </body>
 </html>
+
+<script>
+  fetch('https://devschool-2020.firebaseio.com/alexandra/places.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+</script>

@@ -5,7 +5,7 @@
 
 # [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)❤
 
-# API definitions for locations (created using Insomnia)
+# API definitions for locations
 
 ### GET
 `curl -X GET 'https://devschool-2020.firebaseio.com/alexandra/places.json'`

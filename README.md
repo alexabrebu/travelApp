@@ -5,6 +5,7 @@
 
 # [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)❤
 
+
 # API definitions for locations
 
 ### GET

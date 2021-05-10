@@ -14,7 +14,7 @@ class TravelCard extends LitElement {
     this._locations = [
       {
         name: 'Lorem ipsum',
-        type: true,
+        type: '',
         description: '',
         imageURL: '',
       },
@@ -22,21 +22,8 @@ class TravelCard extends LitElement {
   }
 
   render() {
-    return html`
-      <ul>
-        ${this._todos.map(
-          item =>
-            html`<li>
-              <todo-list-item .toDoItem=${item}></todo-list-item>
-            </li>`
-        )}
-      </ul>
-      <form @submit=${this._handleFormSubmit}>
-        <input type="text" name="text" />
-        <button type="submit">Add</button>
-      </form>
-    `;
+    return html``;
   }
 }
 
-customElements.define('travel-card', TravelCard); // nume comp + ref catre clasa
+customElements.define('travel-card', TravelCard);

@@ -6,7 +6,7 @@ import '../../node_modules/@lion/textarea/lion-textarea.js';
 import '../../node_modules/@lion/button/lion-button.js';
 import '../../node_modules/@lion/select-rich/lion-select-rich.js';
 import '../../node_modules/@lion/select-rich/lion-select-invoker.js';
-import '../../node_modules/@lion/select-rich/lion-option.js';
+import '../../node_modules/@lion/listbox/lion-option.js';
 import '../../node_modules/@lion/listbox/lion-listbox.js';
 import { css } from '@lion/core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';

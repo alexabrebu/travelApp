@@ -1,16 +1,26 @@
 import { LitElement, html, css } from 'lit-element';
-import { openWcLogo } from './open-wc-logo.js';
+import { Router } from '@vaadin/router';
+// import { openWcLogo } from './open-wc-logo.js';
+import './views/Home.js';
+import './views/Tour.js';
+import './views/Hotel.js';
+import './views/Places.js';
+import './views/AddDestination.js';
+import './views/ContactUs.js';
+import '../components/header-nav.js';
+import '../components/footer-nav.js';
 
 export class TravelApp extends LitElement {
   static get properties() {
     return {
-      title: { type: String },
+      _routes: Array,
+      test: String,
     };
   }
 
   static get styles() {
     return css`
-      :host {
+      /* :host {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -22,13 +32,13 @@ export class TravelApp extends LitElement {
         margin: 0 auto;
         text-align: center;
         background-color: var(--travel-app-background-color);
-      }
+      } */
 
-      main {
+      /* main {
         flex-grow: 1;
-      }
+      } */
 
-      .logo > svg {
+      /* .logo > svg {
         margin-top: 36px;
         animation: app-logo-spin infinite 20s linear;
       }
@@ -49,24 +59,46 @@ export class TravelApp extends LitElement {
 
       .app-footer a {
         margin-left: 5px;
-      }
+      } */
     `;
   }
 
   constructor() {
     super();
     this.title = 'DevSchool app';
+    this.test = 'test';
+  }
+
+  firstUpdated() {
+    const outlet = this.shadowRoot.getElementById('main');
+    const router = new Router(outlet);
+    router.setRoutes([
+      { path: '/', component: 'home-page' },
+      { path: '/tour', component: 'tour-page' },
+      { path: '/hotel', component: 'hotel-page' },
+      { path: '/places', component: 'places-page' },
+      { path: '/add-destination', component: 'add-destination-page' },
+      { path: '/contact-us', component: 'contact-page' },
+      { path: '(.*)', component: 'home-page' },
+    ]);
   }
 
   render() {
     return html`
-      <main>
-        <div class="logo">${openWcLogo}</div>
-        <h1>${this.title}</h1>
+      <!-- <header>
+        <a href="/">Home</a>
+        <a href="/tour">Tour</a>
+        <a href="/hotel">Hotel</a>
+        <a href="/places">Places</a>
+        <a href="/add-destination">Add destination</a>
+        <a href="/contact-us">Contact us</a>
+      </header> -->
+      <link rel="stylesheet" href="../assets/styles/styles.css" />
 
-        <p>Welcome traveller ❤ !</p>
-      </main>
+      <header-nav-component></header-nav-component>
 
+      <main id="main"></main>
+      <footer-nav-component aria-hidden="true"></footer-nav-component>
       <!-- <p class="app-footer">
         Made using
         <a
@@ -78,4 +110,8 @@ export class TravelApp extends LitElement {
       </p> -->
     `;
   }
+
+  //   _getCustomTitle(newTitle) {
+  //   return `Your new title is ${newTitle}`;
+  // }
 }

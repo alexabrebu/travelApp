@@ -1,9 +1,9 @@
-<p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
+<p align="right">
+  <img width="500" src="assets/images/travela@2x.png"></img>
 </p>
 
 
-# [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)❤
+# [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)🌸
 
 
 # API definitions for locations

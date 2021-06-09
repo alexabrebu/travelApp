@@ -1,5 +1,5 @@
-<p align="center">
-  <img width="300" src="assets/images/travela@2x.png"></img>
+<p align="right">
+  <img width="500" src="assets/images/travela@2x.png"></img>
 </p>
 
 

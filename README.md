@@ -5,6 +5,20 @@
 
 # [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)🌸
 
+## Super features that I implemented for this application:
+
+<ul>
+  <li>travel cards from fetch api</li>
+  <li>add new destination form (lion component)</li>
+  <li>custom validators for lion-form</li>
+  <li>the app has several pages, shaped as lit views</li>
+  <li>broke the elements into reusable components</li>
+  <li>responsive application (styles are desktop and mobile friendly)</li>
+  <li>Vaading routing (for both header & footer navigation bar)</li>
+  <li>unit tests (& sinon testing)</li>
+  <li>respected a11y aspects</li>
+  <li>cool styling (grid & flex system)</li>
+</ul>
 
 # API definitions for locations
 
@@ -53,9 +67,7 @@
 
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
 
-## Quickstart
 
-Welcome to TravelApp starter kit ! You will implement features for the app while learning about frontend development. 
 
 ## Scripts
 

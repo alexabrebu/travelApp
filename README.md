@@ -2,6 +2,10 @@
   <img width="500" src="assets/images/travela@2x.png"></img>
 </p>
 
+## Travel App
+
+[![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+
 
 # [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)🌸
 
@@ -61,12 +65,6 @@
 
 ### DELETE
 `curl -X DELETE 'https://devschool-2020.firebaseio.com/alexandra/places/placeID.json'`
-
-
-## Travel App
-
-[![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
-
 
 
 ## Scripts

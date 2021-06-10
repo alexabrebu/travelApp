@@ -11,6 +11,20 @@ You can take a look at the API definitions for locations below.
 Also, don't forget to check out my app on Netlify! 😁
 </p>
 
+## Super features that I implemented for this application:
+
+<ul>
+  <li>travel cards from fetch api</li>
+  <li>add new destination form (lion component)</li>
+  <li>custom validators for lion-form</li>
+  <li>the app has several pages, shaped as lit views</li>
+  <li>broke the elements into reusable components</li>
+  <li>responsive application (styles are desktop and mobile friendly)</li>
+  <li>Vaading routing (for both header & footer navigation bar)</li>
+  <li>unit tests (& sinon testing)</li>
+  <li>respected a11y aspects</li>
+  <li>cool styling (grid & flex system)</li>
+</ul>
 
 # API definitions for locations
 

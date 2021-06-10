@@ -2,7 +2,14 @@
   <img width="500" src="assets/images/travela@2x.png"></img>
 </p>
 
+<<<<<<< HEAD
 # Travel App
+=======
+## Travel App
+
+[![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+
+>>>>>>> f0bdab9... Update README.md
 
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
 

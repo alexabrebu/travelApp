@@ -7,7 +7,7 @@
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
 
 <p>This is Travela, a travel app - especially about travelling in Japan (the whole concept is based on that). <br>
-You can take a look at the API definitions for locations below.
+You can take a look at the API definitions for locations below. <br>
 Also, don't forget to check out my app on Netlify! 🌸
 </p>
 
@@ -30,7 +30,7 @@ Also, don't forget to check out my app on Netlify! 🌸
   <li>extra functional pages (contact, tour, hotel, credits)</li>
   <li>contact form with e-mail service</li>
   <li>carousel component @skeleton</li>
-  <li>surprise! (@sakura)</li>
+  <li>surprise! (@sakura) - temporary disabled due to Netlify issue</li>
 </ul>
 
 # API definitions for locations

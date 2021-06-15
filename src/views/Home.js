@@ -1,6 +1,4 @@
-/* HOME PAGE */
-
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html } from 'lit-element';
 import '../../components/hero-section.js';
 import '../../components/book-form-section.js';
 import '../../components/content-description.js';
@@ -11,13 +9,7 @@ import '../../components/lion-form/add-destination.js';
 
 export class Home extends LitElement {
   static get properties() {
-    return {
-      title: { type: String },
-    };
-  }
-
-  static get styles() {
-    return css``;
+    return {};
   }
 
   render() {
@@ -32,9 +24,7 @@ export class Home extends LitElement {
       <div class="page-container">
         <hero-component class="hero-c"></hero-component>
         <book-form-component class="book-form-c"></book-form-component>
-
         <description-component class="description-c"></description-component>
-
         <footer-section-component class="footer-c"></footer-section-component>
       </div>
     `;

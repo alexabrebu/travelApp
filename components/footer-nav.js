@@ -14,6 +14,10 @@ export class FooterNav extends LitElement {
         <div class="footer-nav">
           <nav>
             <ul>
+              <li>
+                @2021 ING DevSchool. All Rights Reserved ||
+                <a href="/credits" id="credits">Credits</a>
+              </li>
               <li><a href="/">Home</a></li>
               <li><a href="/tour">Tour</a></li>
               <li><a href="/hotel">Hotel</a></li>

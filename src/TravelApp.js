@@ -9,12 +9,13 @@ import './views/AddDestination.js';
 import './views/ContactUs.js';
 import '../components/header-nav.js';
 import '../components/footer-nav.js';
+import '../components/services/places-id.js';
+import './views/Credits.js';
 
 export class TravelApp extends LitElement {
   static get properties() {
     return {
       _routes: Array,
-      test: String,
     };
   }
 
@@ -66,52 +67,47 @@ export class TravelApp extends LitElement {
   constructor() {
     super();
     this.title = 'DevSchool app';
-    this.test = 'test';
+    this._routes = [
+      { path: '/', component: 'home-page' },
+      { path: '/tour', component: 'tour-page' },
+      { path: '/hotel', component: 'hotel-page' },
+      { path: '/places', component: 'places-page' },
+      { path: '/places/:id', component: 'places-id' },
+      { path: '/add-destination', component: 'add-destination-page' },
+      { path: '/contact-us', component: 'contact-page' },
+      { path: '/credits', component: 'credits-page' },
+      { path: '(.*)', component: 'home-page' },
+    ];
   }
 
   firstUpdated() {
     const outlet = this.shadowRoot.getElementById('main');
     const router = new Router(outlet);
-    router.setRoutes([
-      { path: '/', component: 'home-page' },
-      { path: '/tour', component: 'tour-page' },
-      { path: '/hotel', component: 'hotel-page' },
-      { path: '/places', component: 'places-page' },
-      { path: '/add-destination', component: 'add-destination-page' },
-      { path: '/contact-us', component: 'contact-page' },
-      { path: '(.*)', component: 'home-page' },
-    ]);
+    router.setRoutes(this._routes);
   }
 
   render() {
     return html`
-      <!-- <header>
-        <a href="/">Home</a>
-        <a href="/tour">Tour</a>
-        <a href="/hotel">Hotel</a>
-        <a href="/places">Places</a>
-        <a href="/add-destination">Add destination</a>
-        <a href="/contact-us">Contact us</a>
-      </header> -->
       <link rel="stylesheet" href="../assets/styles/styles.css" />
 
       <header-nav-component></header-nav-component>
-
       <main id="main"></main>
       <footer-nav-component aria-hidden="true"></footer-nav-component>
+
       <!-- <p class="app-footer">
-        Made using
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p> -->
+              Made using
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/open-wc"
+                >open-wc</a
+              >.
+            </p> -->
     `;
   }
 
-  //   _getCustomTitle(newTitle) {
-  //   return `Your new title is ${newTitle}`;
-  // }
+  // eslint-disable-next-line class-methods-use-this
+  _getCustomTitle(newTitle) {
+    return `Your new title is ${newTitle}`;
+  }
 }

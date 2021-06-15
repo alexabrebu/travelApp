@@ -19,7 +19,7 @@ export class Footer extends LitElement {
           </p>
         </div>
         <form class="form-subscribe">
-          <input type="email" required />
+          <input type="email" aria-label="email" required />
           <button>Subscribe</button>
         </form>
       </div>

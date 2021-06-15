@@ -8,7 +8,7 @@
   <base href="/" />
   <link rel="icon" href="./assets/images/sakura.png" />
   <link rel="stylesheet" type="text/css" href="./node_modules/sakura-js/dist/sakura.css" />
-
+  <script type="application/javascript" src="./node_modules/sakura-js/dist/sakura.js"></script>
   <title>Travela</title>
 
   <style>
@@ -101,21 +101,21 @@
 </head>
 
 <body>
-  <script src="./node_modules/sakura-js/dist/sakura.js"></script>
+ 
   <script>
     /* eslint-disable no-unused-vars */
     function myFunction()
     {
       // eslint-disable-next-line no-undef
-      const sakura = new Sakura('body');
+      var sakura = new Sakura('body');
       // eslint-disable-next-line no-undef
       graceful = true;
-      const checkBox = document.getElementById('myCheck');
-      const text = document.getElementById('text');
-      if (checkBox.checked === true)
+      var checkBox = document.getElementById('myCheck');
+      var text = document.getElementById('text');
+      if (checkBox.checked == true)
       {
         //   sakura.start();
-      } else if (checkBox.checked === false)
+      } else if (checkBox.checked == false)
       {
         sakura.stop();
       }

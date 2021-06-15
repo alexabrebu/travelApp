@@ -8,7 +8,7 @@
 
 <p>This is Travela, a travel app - especially about travelling in Japan (the whole concept is based on that). <br>
 You can take a look at the API definitions for locations below.
-Also, don't forget to check out my app on Netlify! 😁
+Also, don't forget to check out my app on Netlify!
 </p>
 
 # [My link on netlify ](https://modest-mestorf-3f8d74.netlify.app/)🌸

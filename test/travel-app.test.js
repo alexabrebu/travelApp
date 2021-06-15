@@ -1,12 +1,16 @@
 import { html, fixture, expect } from '@open-wc/testing';
 import { stub } from 'sinon';
-
 import '../src/travel-app.js';
 import '../components/lion-form/add-destination.js';
 import '../components/travel/travel-card-item.js';
 import '../src/views/AddDestination.js';
 import '../components/travel/travel-card.js';
 import '../src/views/Places.js';
+import '../src/views/Hotel.js';
+import '../src/views/Tour.js';
+import '../src/views/ContactUs.js';
+import '../components/services/contact.js';
+import '../src/views/Home.js';
 
 describe('TravelApp', () => {
   let element;
@@ -25,17 +29,17 @@ describe('TravelApp', () => {
   //   await expect(element).shadowDom.to.be.accessible();
   // });
 
-  // it('can compute custom title', () => {
-  //   //const testElement = element.shadowRoot
+  it('can compute custom title', () => {
+    // const testElement = element.shadowRoot
 
-  //   //act
-  //   let newTitle = element._getCustomTitle('Hey');
-  //   console.log(newTitle);
+    // act
+    const newTitle = element._getCustomTitle('Hey');
+    console.log(newTitle);
 
-  //   //assert
-  //   expect(newTitle).to.not.be.empty;
-  //   expect(newTitle).to.equal('Your new title is Hey'); //to.not.equal
-  // });
+    // assert
+    expect(newTitle).to.not.be.empty;
+    expect(newTitle).to.equal('Your new title is Hey'); // to.not.equal
+  });
 
   it('has the expected shadowDom', () => {
     expect(element).shadowDom.to.equal(`
@@ -128,5 +132,46 @@ describe('Places', () => {
 
   it('includes the travel cards', () => {
     expect(el.shadowRoot.querySelectorAll('travel-card')).to.exist;
+  });
+});
+
+describe('Hotel', () => {
+  let el;
+  beforeEach(async () => {
+    el = await fixture(html`<hotel-page></hotel-page>`);
+  });
+
+  it('includes the hotel cards', () => {
+    expect(el.shadowRoot.querySelectorAll('hotel-locations')).to.exist;
+  });
+});
+
+describe('Tour', () => {
+  let el;
+  beforeEach(async () => {
+    el = await fixture(html`<tour-page></tour-page>`);
+  });
+
+  it('includes the carousel component', () => {
+    expect(el.shadowRoot.querySelectorAll('carousel-comp')).to.exist;
+  });
+});
+
+describe('ContactUs', () => {
+  let el;
+  beforeEach(async () => {
+    el = await fixture(html`<contact-page></contact-page>`);
+  });
+
+  it('has the right shadowDom', () => {
+    expect(el).shadowDom.to.equal(`
+     <title>Contact Page</title>
+      <hero-component></hero-component>
+      <div class="contact-portion">
+        <p>Hey there, leave me a message. I will actually get it :)</p>
+        <contact-form class="contact-form-c"></contact-form>
+        <map-comp class="map-c"></map-comp>
+      </div>
+    `);
   });
 });

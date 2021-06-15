@@ -2,43 +2,136 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="Description" content="Put your description here."  />
-    <base href="/" />
-   
-   
-    <title>travel-app</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Travel App" content="A very cool app about travelling... especially in Japan!" />
+  <base href="/" />
+  <link rel="icon" href="./assets/images/sakura.png" />
+  <link rel="stylesheet" href="./node_modules/sakura-js/dist/sakura.css" />
 
-    <style>
-        html,
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: sans-serif;
-          background-image: url('https://i.imgur.com/6WmyTfI.jpg');
-          /* background-color: blueviolet; */
-          background-attachment: fixed;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          box-shadow: inset 0 0 0 1000px rgb(18, 11, 31, 0.4);
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-            'Lucida Sans', Arial, sans-serif;
-        }
+  <title>Travela</title>
 
-      
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url('https://i.imgur.com/6WmyTfI.png');
+      /* background-color: blueviolet; */
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: inset 0 0 0 1000px rgb(18, 11, 31, 0.4);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+    }
 
-       
-    </style>
+    /* Sakura */
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 32px;
+      margin-top: 8px;
+      margin-left: 4vh;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: '';
+      height: 24px;
+      width: 24px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    input:checked+.slider {
+      background-color: rgba(199, 103, 175);
+    }
+
+    input:checked+.slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    .slider.round {
+      border-radius: 36px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+    .surprise-text {
+      color: aliceblue;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+
+    .top-surprise {
+      vertical-align: center;
+      display: inline-flex;
+    }
+  </style>
 </head>
 
 <body>
- 
-   <travel-app></travel-app>
+  <script src="./node_modules/sakura-js/dist/sakura.js"></script>
+  <script>
+    /* eslint-disable no-unused-vars */
+    function myFunction()
+    {
+      // eslint-disable-next-line no-undef
+      const sakura = new Sakura('body');
+      // eslint-disable-next-line no-undef
+      graceful = true;
+      const checkBox = document.getElementById('myCheck');
+      const text = document.getElementById('text');
+      if (checkBox.checked === true)
+      {
+        //   sakura.start();
+      } else if (checkBox.checked === false)
+      {
+        sakura.stop();
+      }
+    }
+  </script>
+  <div class="top-surprise">
+    <label class="switch">
+      <input type="checkbox" id="myCheck" onclick="myFunction()" />
+      <span class="slider round"></span>
+    </label>
+    <p class="surprise-text">I'm a surprise!</p>
+  </div>
 
-   
-    <script type="module" src="./src/travel-app.js"></script>
+  <travel-app></travel-app>
+
+  <script type="module" src="./src/travel-app.js"></script>
 </body>
 
 </html>

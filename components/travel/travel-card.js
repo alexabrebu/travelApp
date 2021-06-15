@@ -1,5 +1,6 @@
-import { LitElement, html } from 'lit-element';
+import { LitElement, html, css } from 'lit-element';
 import './travel-card-item.js';
+import './travel-button.js';
 
 class TravelCard extends LitElement {
   static get properties() {
@@ -8,6 +9,26 @@ class TravelCard extends LitElement {
         type: Array,
       },
     };
+  }
+
+  static get styles() {
+    return css`
+      .card {
+        margin-bottom: 16px;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      @media screen and (max-width: 768px) {
+        .cards {
+          justify-content: center;
+        }
+      }
+    `;
   }
 
   connectedCallback() {
@@ -24,7 +45,6 @@ class TravelCard extends LitElement {
     //    Object.values(data).map(x => this.locations.push(x));
     // });
     this.locations = jsonFetchData;
-    // console.log(Object.keys(this.locations));
   }
 
   render() {
@@ -42,20 +62,18 @@ class TravelCard extends LitElement {
           `
         )}
       </div>
-
-      <style>
-        .card {
-          margin-bottom: 16px;
-        }
-
-        .cards {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-        }
-      </style>
     `;
   }
 }
 
 customElements.define('travel-card', TravelCard);
+
+// IDS, ok
+
+// ${Object.keys(this.locations).map(
+//         destination2 => html`
+//           <div class="btns">
+//             <travel-button .id=${destination2}></travel-button>
+//           </div>
+//         `
+//       )}

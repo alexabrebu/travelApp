@@ -18,7 +18,12 @@ export class BookForm extends LitElement {
           <form>
             <div class="form-item">
               <label for="destination">Destination</label> <br />
-              <input list="locations" class="form-cell" required />
+              <input
+                list="locations"
+                class="form-cell"
+                aria-label="Pick a location"
+                required
+              />
               <datalist id="locations">
                 <option value="Tokyo, Japan"></option>
                 <option value="Kyoto, Japan"></option>
@@ -30,9 +35,10 @@ export class BookForm extends LitElement {
             </div>
 
             <div class="form-item">
-              <label for="member">Member</label> <br />
+              <label for="members">Members</label> <br />
               <input
                 type="number"
+                aria-label="Number of people"
                 min="1"
                 max="10"
                 step="1"
@@ -43,12 +49,22 @@ export class BookForm extends LitElement {
 
             <div class="form-item">
               <label for="check-in">Check in Date</label> <br />
-              <input type="date" class="form-cell" required />
+              <input
+                type="date"
+                class="form-cell"
+                aria-label="Select a check-in date"
+                required
+              />
             </div>
 
             <div class="form-item">
               <label for="check-out">Check out Date</label> <br />
-              <input type="date" class="form-cell" required />
+              <input
+                type="date"
+                class="form-cell"
+                aria-label="Select a check-out-date"
+                required
+              />
             </div>
 
             <div class="form-item">

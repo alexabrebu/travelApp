@@ -1,5 +1,4 @@
 import { LitElement, html } from 'lit-element';
-
 import '../../node_modules/@lion/form/lion-form.js';
 import '../../node_modules/@lion/input/lion-input.js';
 import '../../node_modules/@lion/textarea/lion-textarea.js';
@@ -47,7 +46,7 @@ class DestinationForm extends LitElement {
     return [
       css`
         .form-control label {
-          color: rgb(18, 11, 31)e;
+          color: rgb(18, 11, 31);
           font-weight: bold;
           font-size: 24px;
         }
@@ -70,16 +69,15 @@ class DestinationForm extends LitElement {
           border-radius: 24px;
           height: 6vh;
           background-color:rgba(199, 103, 175, 0.2);
-          /* background-color:rgb(71, 135, 179, 0.6) */
         }
 
         lion-button{
            font-size: 2vh;
-            border-radius: 15px;
+            border-radius: 16px;
             color: aliceblue;
             background-color: rgb(18, 11, 31);
             font-weight: bold;
-            padding: 20px 50px;
+            padding: 20px 52px;
         }
 
         lion-button:hover{
@@ -111,7 +109,6 @@ class DestinationForm extends LitElement {
     this.culture = 'culture';
     this.modern = 'modern';
     this.other = 'other';
-    // this.submitHandler = this.submitHandler.bind(this);
   }
 
   connectedCallback() {

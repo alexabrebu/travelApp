@@ -6,7 +6,6 @@ export class CapitalWord extends Validator {
   }
 
   static get properties() {
-    // eslint issue
     return {
       hasError: {
         attribute: false,

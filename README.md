@@ -95,7 +95,7 @@ Also, don't forget to check out my app on Netlify! 😁
   <li>extra functional pages (contact, tour, hotel, credits)</li>
   <li>contact form with e-mail service</li>
   <li>carousel component @skeleton</li>
-  <li>surprise! (@sakura)</li>
+  <li>surprise! (@sakura) - temporary disabled due to Netlify issue</li>
 </ul>
 
 # API definitions for locations

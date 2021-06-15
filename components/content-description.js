@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-// import '../assets/styles/styles.css'
+
 export class ConentDescription extends LitElement {
   static get properties() {
     return {};
@@ -7,43 +7,33 @@ export class ConentDescription extends LitElement {
 
   static get styles() {
     return css`
-            .description-grid {
-              display:grid;
-              grid-template-columns: 0.8fr 3fr;
-              grid-template-rows: max-content;
-              grid-template-areas:
-                /* 'header header' */
-                'sn ds'
-                /* 'footer footer'; */
-              
+      .description-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 3fr;
+        grid-template-rows: max-content;
+        grid-template-areas: 'sn ds';
+      }
 
-            }
+      .side-nav {
+        grid-area: sn;
+      }
 
-          .side-nav{
-            grid-area: sn
-          }
+      .description-section {
+        grid-area: ds;
+      }
 
-          .description-section{
-            grid-area: ds
-          }
-            
-        @media screen and (max-width: 768px) {
+      @media screen and (max-width: 768px) {
+        .description-grid {
+          grid-template-columns: auto;
+          grid-template-rows: max-content;
+          grid-template-areas: 'ds';
+        }
 
-
-            .description-grid  {
-                grid-template-columns: auto;
-               grid-template-rows: max-content;
-                grid-template-areas:
-                    'ds'
-                    
-            }
-
-            
-            .side-nav {
-                display: none
-            }
-
-              `;
+        .side-nav {
+          display: none;
+        }
+      }
+    `;
   }
 
   render() {

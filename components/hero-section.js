@@ -1,17 +1,8 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html } from 'lit-element';
 
 export class Hero extends LitElement {
   static get properties() {
     return {};
-  }
-
-  static get styles() {
-    return css`
-      html,
-      body {
-        background-color: black; /* de intrebat*/
-      }
-    `;
   }
 
   render() {
@@ -25,10 +16,14 @@ export class Hero extends LitElement {
         <!-- HERO SECTION -->
         <div class="hero-section">
           <p>
-            Discover The World<br />
-            With Us
+            <a href="/" class="nostyle">
+              Discover The World<br />
+              With Us
+            </a>
           </p>
-          <button class="btns">Start Tour</button>
+          <button class="btns">
+            <a href="/tour" class="nostyle">Start Tour</a>
+          </button>
         </div>
       </div>
     `;

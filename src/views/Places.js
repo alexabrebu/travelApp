@@ -1,5 +1,3 @@
-/* PLACES PAGE */
-
 import { LitElement, html } from 'lit-element';
 import '../../components/hero-section.js';
 import '../../components/travel/travel-card.js';

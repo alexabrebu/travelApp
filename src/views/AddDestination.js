@@ -1,6 +1,4 @@
-/* ADD DESTINATION PAGE */
-
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html } from 'lit-element';
 import '../../components/hero-section.js';
 import '../../components/lion-form/add-destination.js';
 import '../../components/footer-nav.js';
@@ -8,10 +6,6 @@ import '../../components/footer-nav.js';
 class AddDestination extends LitElement {
   static get properties() {
     return {};
-  }
-
-  static get styles() {
-    return css``;
   }
 
   render() {
